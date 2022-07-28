@@ -1,0 +1,28 @@
+{
+  "name": "SuiteCRM",
+  "version": "1.0.0",
+  "description": "Basic coverage for an application",
+  "directories": {},
+  "scripts": {
+    "build-dev": "npm run build-dev --prefix ./node_modules/@jacada-jbot/coverage-utils",
+    "build-prod": "npm run build-prod --prefix ./node_modules/@jacada-jbot/coverage-utils",
+    "create-zip": "npm run create-zip --prefix ./node_modules/@jacada-jbot/coverage-utils"
+  },
+  "keywords": [],
+  "author": "rcaspi",
+  "license": "ISC",
+  "files": [
+    "dist/",
+    "coverage.zip",
+    "elementsMetadata/elementsMetadata.json",
+    "template/",
+    "include/"
+  ],
+  "main": "./dist/coverage.js",
+  "dependencies": {
+    "@jacada-jbot/web": "^4.0.6"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.14"
+  }
+}

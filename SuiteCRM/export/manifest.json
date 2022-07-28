@@ -1,0 +1,56 @@
+{
+    "name": "SuiteCRM",
+    "type": "COVERAGE",
+    "version": "1.0.0",
+    "description": "Basic coverage for an application",
+    "createdOn": 0,
+    "createdBy": "rcaspi",
+    "platforms": ["Chrome"],
+    "dynamicAttributesSections": [
+        {
+            "name": "ApplicationLifeCycle",
+            "attributes": [
+                {
+                    "name": "LookupTimeout",
+                    "type": "NUMBER",
+                    "description": "Time allotted to search for a specified application",
+                    "maxRange": "90",
+                    "defaultValue": "5",
+                    "required": false
+                },
+                {
+                    "name": "StartIfNotFound",
+                    "type": "BOOLEAN",
+                    "description": "Attempt to start application if not found within lookup timeout period",
+                    "required": false,
+                    "defaultValue": "false",
+                    "placeholder": ""
+                },
+                {
+                    "name": "Command",
+                    "type": "TEXT",
+                    "description": "Windows command that executes the application(e.g. 'application.exe')",
+                    "required": false,
+                    "defaultValue": "",
+                    "placeholder": ""
+                },
+                {
+                    "name": "Arguments",
+                    "type": "TEXT",
+                    "description": "Optional application command line arguments (e.g. 'fullscreen')",
+                    "required": false,
+                    "defaultValue": "",
+                    "placeholder": ""
+                },
+                {
+                    "name": "AppLoadTimeout",
+                    "type": "NUMBER",
+                    "description": "Time allotted to load an application after it has been started",
+                    "defaultValue": "30",
+                    "maxRange": "600",
+                    "required": false
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+{
+	"coverageHandlerName": "SuiteCRM",
+	"type": "Application",
+	"children": [
+	],
+	"coverageHandlerFactory": {}
+}

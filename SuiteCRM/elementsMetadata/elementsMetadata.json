@@ -1,0 +1,614 @@
+{
+  "Button": {
+    "displayName": "Button",
+    "attributes": [
+      {
+        "name": "exists",
+        "displayName": "",
+        "type": "boolean",
+        "getter": {
+          "name": "isExists",
+          "displayName": "Get Exists: Indicate whether the button is displayed on the screen"
+        },
+        "subscriber": {
+          "name": "existsChanged",
+          "function": "subscribeToExistsChanged"
+        }
+      },
+      {
+        "name": "disabled",
+        "displayName": "",
+        "type": "boolean",
+        "getter": {
+          "name": "isDisabled",
+          "displayName": "Get Disabled: Indicate whether the button is disabled"
+        },
+        "subscriber": {
+          "name": "disabledChanged",
+          "function": "subsribeToDisabledChanged"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "click",
+        "description": "Click on %%",
+        "displayName": "Click: Click on the button",
+        "parameters": [],
+        "returnType": "void"
+      }
+    ],
+    "triggers": [
+      {
+        "description": "Button was clicked",
+        "displayName": "Fires when user clicks the %%",
+        "subscriber": {
+          "name": "clicked",
+          "function": "subscribeToClicked"
+        }
+      },
+      {
+        "description": "Button changes it's state",
+        "displayName": "Fires when the %% changed state",
+        "subscriber": {
+          "name": "existsChanged",
+          "function": "subscribeToExistsChanged"
+        }
+      },
+      {
+        "description": "Button disabled/enabled",
+        "displayName": "Fires when the %% changes enabled",
+        "subscriber": {
+          "name": "disabledChanged",
+          "function": "subsribeToDisabledChanged"
+        }
+      }
+    ]
+  },
+  "CheckBox": {
+    "displayName": "Check Box",
+    "value": {
+      "name": "checked",
+      "displayName": "",
+      "type": "boolean",
+      "getter": {
+        "name": "getChecked",
+        "displayName": "Get Checked: Indicate whether the check box is selected"
+      },
+      "setter": {
+        "name": "setChecked"
+      },
+      "subscriber": {
+        "name": "checkedChanged",
+        "function": "subscribeToCheckedChanged"
+      }
+    },
+    "attributes": [
+      {
+        "name": "exists",
+        "displayName": "",
+        "type": "boolean",
+        "getter": {
+          "name": "isExists",
+          "displayName": "Get Exists: Indicate whether the check box is displayed on the screen"
+        },
+        "subscriber": {
+          "name": "existsChanged",
+          "function": "subscribeToExistsChanged"
+        }
+      },
+      {
+        "name": "disabled",
+        "displayName": "",
+        "type": "boolean",
+        "getter": {
+          "name": "isDisabled",
+          "displayName": "Get Disabled: Indicate whether the check box is disabled"
+        },
+        "subscriber": {
+          "name": "disabledChanged",
+          "function": "subsribeToDisabledChanged"
+        }
+      }
+    ],
+    "actions": [],
+    "triggers": [
+      {
+        "description": "Check box value was changed",
+        "displayName": "Fires when the %% checked value is changed",
+        "subscriber": {
+          "name": "checkedChanged",
+          "function": "subscribeToCheckedChanged"
+        }
+      },
+      {
+        "description": "Button changes it's state",
+        "displayName": "Fires when the %% changed state",
+        "subscriber": {
+          "name": "existsChanged",
+          "function": "subscribeToExistsChanged"
+        }
+      },
+      {
+        "description": "Button disabled/enabled",
+        "displayName": "Fires when the %% changes enabled",
+        "subscriber": {
+          "name": "disabledChanged",
+          "function": "subsribeToDisabledChanged"
+        }
+      }
+    ]
+  },
+  "TextInput": {
+    "displayName": "Text Input",
+    "value": {
+      "name": "text",
+      "displayName": "",
+      "type": "string",
+      "getter": {
+        "name": "getText",
+        "displayName": "Get Text: Get value of the text in the text box"
+      },
+      "setter": {
+        "name": "setText"
+      },
+      "subscriber": {
+        "name": "textChanged",
+        "function": "subscribeToTextChanged"
+      }
+    },
+    "attributes": [
+      {
+        "name": "exists",
+        "displayName": "",
+        "type": "boolean",
+        "getter": {
+          "name": "isExists",
+          "displayName": "Get Exists: Indicate whether the text box is displayed on the screen"
+        },
+        "subscriber": {
+          "name": "existsChanged",
+          "function": "subscribeToExistsChanged"
+        }
+      },
+      {
+        "name": "disabled",
+        "displayName": "",
+        "type": "boolean",
+        "getter": {
+          "name": "isDisabled",
+          "displayName": "Get Disabled: Indicate whether the text box is disabled"
+        },
+        "subscriber": {
+          "name": "disabledChanged",
+          "function": "subsribeToDisabledChanged"
+        }
+      }
+    ],
+    "actions": [],
+    "triggers": [
+      {
+        "description": "Text Input value was changed",
+        "displayName": "Fires when the %% value is changed",
+        "subscriber": {
+          "name": "textChanged",
+          "function": "subscribeToTextChanged"
+        }
+      },
+      {
+        "description": "Button changes it's state",
+        "displayName": "Fires when the %% changed state",
+        "subscriber": {
+          "name": "existsChanged",
+          "function": "subscribeToExistsChanged"
+        }
+      },
+      {
+        "description": "Button disabled/enabled",
+        "displayName": "Fires when the %% changes enabled",
+        "subscriber": {
+          "name": "disabledChanged",
+          "function": "subsribeToDisabledChanged"
+        }
+      }
+    ]
+  },
+  "Select": {
+    "displayName": "Drop-down list",
+    "value": {
+      "name": "selectedItem",
+      "displayName": "",
+      "type": "string",
+      "getter": {
+        "name": "getSelectedItem",
+        "displayName": "Get selected: Get the selected item value"
+      },
+      "setter": {
+        "name": "setSelectedItem"
+      },
+      "subscriber": {
+        "name": "selectionChanged",
+        "function": "subscribeToSelectionChanged"
+      }
+    },
+    "attributes": [
+      {
+        "name": "exists",
+        "displayName": "",
+        "type": "boolean",
+        "getter": {
+          "name": "isExists",
+          "displayName": "Get Exists: Indicate whether the selected item is displayed on the screen"
+        },
+        "subscriber": {
+          "name": "existsChanged",
+          "function": "subscribeToExistsChanged"
+        }
+      },
+      {
+        "name": "disabled",
+        "displayName": "",
+        "type": "boolean",
+        "getter": {
+          "name": "isDisabled",
+          "displayName": "Get Disabled: Indicate whether the selected item is disabled"
+        },
+        "subscriber": {
+          "name": "disabledChanged",
+          "function": "subsribeToDisabledChanged"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "getItems",
+        "description": "Get Items: Get all combo box items",
+        "displayName": "Get Items: Get all combo box items",
+        "parameters": [],
+        "returnType": "string[]"
+      }
+    ],
+    "triggers": [
+      {
+        "description": "Select value was changed",
+        "displayName": "Fires when the %% value is changed",
+        "subscriber": {
+          "name": "selectionChanged",
+          "function": "subscribeToSelectionChanged"
+        }
+      },
+      {
+        "description": "Button changes it's state",
+        "displayName": "Fires when the %% changed state",
+        "subscriber": {
+          "name": "existsChanged",
+          "function": "subscribeToExistsChanged"
+        }
+      },
+      {
+        "description": "Button disabled/enabled",
+        "displayName": "Fires when the %% changes enabled",
+        "subscriber": {
+          "name": "disabledChanged",
+          "function": "subsribeToDisabledChanged"
+        }
+      }
+    ]
+  },
+  "TextArea": {
+    "displayName": "Text Area",
+    "value": {
+      "name": "text",
+      "displayName": "",
+      "type": "string",
+      "getter": {
+        "name": "getText",
+        "displayName": "Get Text: Get value of the text in the text area"
+      },
+      "setter": {
+        "name": "setText"
+      },
+      "subscriber": {
+        "name": "textChanged",
+        "function": "subscribeToTextChanged"
+      }
+    },
+    "attributes": [
+      {
+        "name": "exists",
+        "displayName": "",
+        "type": "boolean",
+        "getter": {
+          "name": "isExists",
+          "displayName": "Get Exists: Indicate whether the text area is displayed on the screen"
+        },
+        "subscriber": {
+          "name": "existsChanged",
+          "function": "subscribeToExistsChanged"
+        }
+      },
+      {
+        "name": "disabled",
+        "displayName": "",
+        "type": "boolean",
+        "getter": {
+          "name": "isDisabled",
+          "displayName": "Get Disabled: Indicate whether the text area is disabled"
+        },
+        "subscriber": {
+          "name": "disabledChanged",
+          "function": "subsribeToDisabledChanged"
+        }
+      }
+    ],
+    "actions": [],
+    "triggers": [
+      {
+        "description": "Text Area value was changed",
+        "displayName": "Fires when the %% value is changed",
+        "subscriber": {
+          "name": "textChanged",
+          "function": "subscribeToTextChanged"
+        }
+      },
+      {
+        "description": "Button changes it's state",
+        "displayName": "Fires when the %% changed state",
+        "subscriber": {
+          "name": "existsChanged",
+          "function": "subscribeToExistsChanged"
+        }
+      },
+      {
+        "description": "Button disabled/enabled",
+        "displayName": "Fires when the %% changes enabled",
+        "subscriber": {
+          "name": "disabledChanged",
+          "function": "subsribeToDisabledChanged"
+        }
+      }
+    ]
+  },
+  "Link": {
+    "displayName": "Hyperlink",
+    "attributes": [
+      {
+        "name": "exists",
+        "displayName": "",
+        "type": "boolean",
+        "getter": {
+          "name": "isExists",
+          "displayName": "Get Exists: Indicate whether the link is displayed on the screen"
+        },
+        "subscriber": {
+          "name": "existsChanged",
+          "function": "subscribeToExistsChanged"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "click",
+        "description": "Click on %%",
+        "displayName": "Click: Click on the link",
+        "parameters": [],
+        "returnType": "void"
+      }
+    ],
+    "triggers": [
+      {
+        "description": "Hyperlink was clicked",
+        "displayName": "Fires when user clicks the %%",
+        "subscriber": {
+          "name": "clicked",
+          "function": "subscribeToClicked"
+        }
+      },
+      {
+        "description": "Button changes it's state",
+        "displayName": "Fires when the %% changed state",
+        "subscriber": {
+          "name": "existsChanged",
+          "function": "subscribeToExistsChanged"
+        }
+      },
+      {
+        "description": "Button disabled/enabled",
+        "displayName": "Fires when the %% changes enabled",
+        "subscriber": {
+          "name": "disabledChanged",
+          "function": "subsribeToDisabledChanged"
+        }
+      }
+    ]
+  },
+  "RadioButton": {
+    "displayName": "Radio button",
+    "value": {
+      "name": "checked",
+      "displayName": "",
+      "type": "boolean",
+      "getter": {
+        "name": "getChecked",
+        "displayName": "Get Checked: Indicate whether the radio button is selected"
+      },
+      "setter": {
+        "name": "setChecked"
+      },
+      "subscriber": {
+        "name": "checkedChanged",
+        "function": "subscribeToCheckedChanged"
+      }
+    },
+    "attributes": [
+      {
+        "name": "exists",
+        "displayName": "",
+        "type": "boolean",
+        "getter": {
+          "name": "isExists",
+          "displayName": "Get Exists: Indicate whether the radio button is displayed on the screen"
+        },
+        "subscriber": {
+          "name": "existsChanged",
+          "function": "subscribeToExistsChanged"
+        }
+      },
+      {
+        "name": "disabled",
+        "displayName": "",
+        "type": "boolean",
+        "getter": {
+          "name": "isDisabled",
+          "displayName": "Get Disabled: Indicate whether the radio button is disabled"
+        },
+        "subscriber": {
+          "name": "disabledChanged",
+          "function": "subsribeToDisabledChanged"
+        }
+      }
+    ],
+    "actions": [],
+    "triggers": [
+      {
+        "description": "Radio button value was changed",
+        "displayName": "Fires when the %% checked value is changed",
+        "subscriber": {
+          "name": "checkedChanged",
+          "function": "subscribeToCheckedChanged"
+        }
+      },
+      {
+        "description": "Button changes it's state",
+        "displayName": "Fires when the %% changed state",
+        "subscriber": {
+          "name": "existsChanged",
+          "function": "subscribeToExistsChanged"
+        }
+      },
+      {
+        "description": "Button disabled/enabled",
+        "displayName": "Fires when the %% changes enabled",
+        "subscriber": {
+          "name": "disabledChanged",
+          "function": "subsribeToDisabledChanged"
+        }
+      }
+    ]
+  },
+  "Table": {
+    "displayName": "Table",
+    "attributes": [
+      {
+        "name": "exists",
+        "displayName": "",
+        "type": "boolean",
+        "getter": {
+          "name": "isExists",
+          "displayName": "Get Exists: Indicate whether the table is displayed on the screen"
+        },
+        "subscriber": {
+          "name": "existsChanged",
+          "function": "subscribeToExistsChanged"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "name": "getTableDataByRange",
+        "description": "Get fields values by range",
+        "displayName": "Get Field Data: Get fields values by range",
+        "parameters": [],
+        "returnType": "void"
+      },
+      {
+        "name": "getTableDataByField",
+        "description": "Get table's records using simple search",
+        "displayName": "Simple Search: Get table's records using simple search",
+        "parameters": [],
+        "returnType": "void"
+      }
+    ],
+    "triggers": [
+      {
+        "description": "Button changes it's state",
+        "displayName": "Fires when the %% changed state",
+        "subscriber": {
+          "name": "existsChanged",
+          "function": "subscribeToExistsChanged"
+        }
+      },
+      {
+        "description": "Button disabled/enabled",
+        "displayName": "Fires when the %% changes enabled",
+        "subscriber": {
+          "name": "disabledChanged",
+          "function": "subsribeToDisabledChanged"
+        }
+      }
+    ]
+  },
+  "TextOutput": {
+    "displayName": "Text Output",
+    "value": {
+      "name": "text",
+      "displayName": "",
+      "type": "string",
+      "getter": {
+        "name": "getText",
+        "displayName": "Get Text: Get value of the text"
+      }
+    },
+    "attributes": [
+      {
+        "name": "exists",
+        "displayName": "",
+        "type": "boolean",
+        "getter": {
+          "name": "isExists",
+          "displayName": "Get Exists: Indicate whether the text is displayed on the screen"
+        }
+      }
+    ],
+    "actions": [],
+    "triggers": []
+  },
+  "Application": {
+    "displayName": "Application",
+    "attributes": [],
+    "actions": [],
+    "triggers": [
+      {
+        "description": "Application was opened",
+        "displayName": "Fires when the %% opens",
+        "subscriber": {
+          "name": "opened",
+          "function": "subscribeToOpened"
+        }
+      },
+      {
+        "description": "Application was closed",
+        "displayName": "Fires when the %% closes",
+        "subscriber": {
+          "name": "closed",
+          "function": "subscribeToClosed"
+        }
+      }
+    ]
+  },
+  "WebPage": {
+    "displayName": "Page",
+    "attributes": [],
+    "actions": [],
+    "triggers": [
+      {
+        "description": "Page was opened",
+        "displayName": "Fires when the %% opens",
+        "subscriber": {
+          "name": "opened",
+          "function": "subscribeToOpened"
+        }
+      }
+    ]
+  }
+}
